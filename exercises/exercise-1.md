@@ -55,7 +55,9 @@ Since we will use Python in the next milestones let's make sure it works for us 
 
 ### Reflection
 
-Now we can control the LED with Python code. That's cool. We could now write local logic to make some cool stuff but only locally on the Raspberry Pi. To connect this to the world and make IoT of it we need to do some more.
+Ok, where are we?
+
+Now we can control the LED with Python code. That's cool. We could now write local logic to make some cool stuff but only locally on the Raspberry Pi. To connect this to the world and make IoT of it we need to do some more. There are (at least) two ways to do this. We could have the code connect to the platform itself. That would be like a native sensor/actuator where the Raspberry Pi acts as a large device. An other way to do it is to let the Raspberry Pi be an Edge Client and have som capabilities of its own. Here we go the second route an connect the Raspberry Pi as an Edge Client. 
 
 ### Milestone III (Establish connection)
 
