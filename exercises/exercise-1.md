@@ -32,7 +32,7 @@ actuator works.
 
 ### Milestone I
 
-![The circuit](../images/exercise-1-curcuit.png)
+![The circuit](../images/exercise-1-circuit.png)
 
 1. Make sure you can login to your Raspberry Pi and that it is arm64.
 1. Make the circuit as the image above.
