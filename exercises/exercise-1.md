@@ -4,12 +4,15 @@ In this exercise we will control a LED on our breadboard using commands from an
 application connected to IoT Open. This is exactly how a switch or any on/off
 actuator works.
 
+!(../images/exercise-1-overview.png)
+
 ## Material
 
 - Raspberry Pi with 64bit operating system
 - Breadboard and some connection cables
 - A LED
 - A 330 Ohm Resistor
+- Some connection wires
 
 ## Preparations
 
@@ -19,9 +22,9 @@ actuator works.
 
 ## Learning goals
 
-- Actuators (Control real things via IoT)
+- Actuators (Control real things via IoT, unlike sensors that just collects data)
 - Communication via MQTT
 - Edge Clients
-- How topic\_write works
+- How topic\_write works in IoT Open
 - Starting point for following exercises
 
