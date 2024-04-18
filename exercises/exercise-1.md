@@ -4,7 +4,7 @@ In this exercise we will control a LED on our breadboard using commands from an
 application connected to IoT Open. This is exactly how a switch or any on/off
 actuator works.
 
-!(../images/exercise-1-overview.png)
+![Overview of the goal for this exercise](../images/exercise-1-overview.png)
 
 ## Material
 
