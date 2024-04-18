@@ -1,30 +1,27 @@
 # IoT Exercise 1
 
-In this exercise we will control a LED on our breadboard using commands from an
-application connected to IoT Open. This is exactly how a switch or any on/off
-actuator works.
+In this exercise we will control a LED on our breadboard using commands from an application connected to IoT Open. This is exactly how a switch or any on/off actuator works. This will also work as a foundation for the following exercises.
 
 ![Overview of the goal for this exercise](../images/exercise-1-overview.png)
 
 ## Material
 
 - Raspberry Pi with 64bit operating system
-- Breadboard and some connection cables
+- Breadboard and some connection cables so that you can connect the pins from the Raspberry Pi to you breadboard.
 - A LED
 - A 330 Ohm Resistor
 
 ## Preparations
 
-- Install Raspberry Pi OS 64bit on your Raspberry (if you haven't already). Make
-  sure you can log in to it from your laptop.
-- You should have an account on IoT Open
+- Install Raspberry Pi OS 64bit on your Raspberry (if you haven't already). Make sure you can log in to it from your laptop.
+- You should have an account on IoT Open that you can log into from earlier exercises.
 
 ## Learning goals
 
 - Actuators (Control real things via IoT, unlike sensors that just collects data)
 - Communication via MQTT
 - Edge Clients
-- How topic\_write works in IoT Open
+- How topic\_write and the MQTT-payload format works in IoT Open
 - Starting point for following exercises
 
 ## Steps to make this happen
@@ -57,7 +54,7 @@ Since we will use Python in the next milestones let's make sure it works for us 
 
 Ok, where are we?
 
-Now we can control the LED with Python code. That's cool. We could now write local logic to make some cool stuff but only locally on the Raspberry Pi. To connect this to the world and make IoT of it we need to do some more. There are (at least) two ways to do this. We could have the code connect to the platform itself. That would be like a native sensor/actuator where the Raspberry Pi acts as a large device. An other way to do it is to let the Raspberry Pi be an Edge Client and have som capabilities of its own. Here we go the second route an connect the Raspberry Pi as an Edge Client. 
+Now we can control the LED with Python code. That's cool. We could now write local logic to make some cool stuff but only locally on the Raspberry Pi. To connect this to the world and make IoT of it we need to do some more. There are (at least) two ways to do this. We could have the code connect to the platform itself. That would be like a native sensor/actuator where the Raspberry Pi acts as a large device. An other way to do it is to let the Raspberry Pi be an Edge Client and have some capabilities of its own. Here we go the second route an connect the Raspberry Pi as an Edge Client. 
 
 ### Milestone III (Establish connection)
 
