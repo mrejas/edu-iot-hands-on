@@ -44,6 +44,8 @@ Make the electronics work and the LED to flash.
    1. Test 3 and 4 over and over.
 1. Do not move to the next section until it works and you know why!
 
+[A photo of my circuit](../images/exercise-1-circuit-photo.jpg).
+
 ### Milestone II (Software POC)
 
 Since we will use Python in the next milestones let's make sure it works for us to control the LED.
