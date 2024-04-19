@@ -7,9 +7,11 @@ In this exercise we will control a LED on our breadboard using commands from an 
 ## Material
 
 - Raspberry Pi with 64bit operating system
-- Breadboard and some connection cables so that you can connect the pins from the Raspberry Pi to you breadboard.
+- Breadboard and some connection cables so that you can connect the pins from the Raspberry Pi to your breadboard.
 - A LED
 - A 330Ω Resistor\*
+
+In [this photo](../images/exercise-1-circuit-photo.jpg) you can see all the components needed.
 
 _\*) 330Ω is not exact, if higher the LED will glow less intence. Newer go under 200Ω since that may damage your Raspberry Pi._
 
@@ -55,8 +57,9 @@ Make the electronics work and the LED to flash.
 Since we will use Python in the next milestones let's make sure it works for us to control the LED.
 
 1. Make sure you passed milestone I.
-1. Save [this program](../code/led_flash.py) as "led_flash.py"
-1. Run it like "python python led_flash.py"
+1. Install paho python lib on your RPi: `sudo apt-get install python3-paho-mqtt` 
+1. Save [this program](../code/led_flash.py) as "led\_flash.py"
+1. Run it like "python python led\_flash.py"
 1. The LED should be lit for one half second.
 1. Do not move to the next section until it works and you know why!
 
@@ -74,3 +77,13 @@ Now we can control the LED with Python code. That's cool. We could now write loc
 1. Run the script at https://github.com/mrejas/rpi-edge-client.sh/blob/main/iotopen-lynx-edge-client.sh
 1. Verify in IoT Open that the Edge-Client is connected.
 1. Do not move to the next section until it works and you know why!
+
+### Milestone IV (Verify MQTT traffic)
+
+1. Make sure you have achieved milestone III
+1. Log in to IoT Open
+1. Open a console (ssh or terminal) on the Raspberry Pi
+1. Navigate to the MQTT-window in IoT Open on your Installation
+1. Type the following on the Raspberry Pi `mosquitto_pub -t obj/test -m "Hello World"`
+1. In the MQTT-window in IoT Open you should now see `<clientid>/obj/test Hello World`
+1. Test is ready, do not move on until it works and you know why!
