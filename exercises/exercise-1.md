@@ -9,7 +9,9 @@ In this exercise we will control a LED on our breadboard using commands from an 
 - Raspberry Pi with 64bit operating system
 - Breadboard and some connection cables so that you can connect the pins from the Raspberry Pi to you breadboard.
 - A LED
-- A 330 Ohm Resistor
+- A 330Ω Resistor\*
+
+_\*) 330Ω is not exact, if higher the LED will glow less intence. Newer go under 200Ω since that may damage your Raspberry Pi._
 
 ## Preparations
 
@@ -20,6 +22,8 @@ In this exercise we will control a LED on our breadboard using commands from an 
 
 - [Raspberry Pi Documentation, Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 - [IoT Open Platform](https://lynx.iotopen.se)
+- [How To Use A Breadboard](https://www.build-electronic-circuits.com/breadboard/)
+- [Resistor color code calculator](https://www.calculator.net/resistor-calculator.html)
 
 
 ## Learning goals
