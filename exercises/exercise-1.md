@@ -33,7 +33,7 @@ _\*) 330Ω is not exact, if higher the LED will glow less intence. Newer go unde
 - Actuators (Control real things via IoT, unlike sensors that just collects data)
 - Communication via MQTT
 - IoT Open Edge Client
-- How topic\_write and the MQTT-payload format works in IoT Open
+- How `topic_write` and the MQTT-payload format works in IoT Open
 - Starting point for following exercises
 
 ## Steps to make this happen
@@ -57,9 +57,8 @@ Make the electronics work and the LED to flash.
 Since we will use Python in the next milestones let's make sure it works for us to control the LED.
 
 1. Make sure you passed milestone I.
-1. Install paho python lib on your RPi: `sudo apt-get install python3-paho-mqtt` 
-1. Save [this program](../code/led_flash.py) as "led\_flash.py"
-1. Run it like "python python led\_flash.py"
+1. Save [this program](../code/led_flash.py) as `led_flash.py`
+1. Run it like `python python led_flash.py`
 1. The LED should be lit for one half second.
 1. Do not move to the next section until it works and you know why!
 
@@ -87,3 +86,49 @@ Now we can control the LED with Python code. That's cool. We could now write loc
 1. Type the following on the Raspberry Pi `mosquitto_pub -t obj/test -m "Hello World"`
 1. In the MQTT-window in IoT Open you should now see `<clientid>/obj/test Hello World`
 1. Test is ready, do not move on until it works and you know why!
+
+
+### Milestone V (Use MQTT to control the LED)
+
+1. Make sure you passed milestone IV
+1. Log in to the Raspberry Pi and open TWO consoles.
+1. Install paho python lib on your RPi: sudo apt-get install python3-paho-mqtt
+1. Save this program as `led_integration.py` and start it (it will hog your terminal)
+1. You can stop the program with `Ctrl-C`
+1. In the other console run `mosquitto_pub -t set/tuc/led1 -m '{"value": 0}'`
+1. Change the `0` to something else (e.g. `1` or `255`) and see what happens.
+1. Take a look at the MQTT window in IoT Open or the Workbench to see what happens.
+1. Do not move to the next section until it works and you know why!
+
+
+### Milestone VI (Create a function on IoT Open for the LED)
+
+1. Make sure you have achieved Milestone V
+1. Log in to IoT Open and navigate to your installation
+1. Navigate to functions and create a new function
+1. Call it "MyLED" or whatever you see fit
+1. Give it type `switch`
+1. In the meta data section add `topic_write` with value `set/tuc/led1`
+1. Now you can test to turn on and off the led using the MQTT-window in IoT Open or the data fiddler in the Workbench.
+1. Take a look at the MQTT window in IoT Open or the Workbench to see what happens.
+1. Do not move to the next section until it works and you know why!
+
+### Reflection
+
+Now we can control the LED with `topic_write`. But how will we know the status of the LED? You might think that we can do that by listening to `topic_write` and that would work to some extent. But what we are monitoring then is when the LED was asked to be set to a certain state. Not that i actually was. If the Rasperry Pi is offline and somewone sends something to `topic_write` nothing will happen. This is one of the reasons for `topic_read` and `topic_write`.
+
+What we want is to let the controller on the Rasperry Pi (the Python program) to report back that the LED actually was lit or unlit. This is done on `topic_read` and on a MQTT-topic starting with `obj/`. If you want to observe something you should listen to `topic_read`. Sensors that only reports data, e.g. a thermometer only needs a `topic_read`.
+
+### Milestone VII (Create topic read and report to it)
+
+1. Make sure you have achieved Milestone VI
+1. Log in to IoT Open and navigate to your installation
+1. Navigate to functions and create a new function
+1. In the meta data section change `topic_read` to the value `obj/tuc/led1`
+1. Update your program to the program to the right.
+1. Now you can test to turn on and off the led using the MQTT-window in IoT Open or the data fiddler in the Workbench.
+1. Take a look at the MQTT window in IoT Open or the Workbench to see what happens.
+1. Do not move to the next section until it works and you know why!
+
+### Milestone VIII (Create a Node-RED application controlling the LED)
+
