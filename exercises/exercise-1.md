@@ -1,6 +1,6 @@
 # IoT Exercise 1
 
-In this exercise we will control a LED on our breadboard using commands from an application connected to IoT Open. This is exactly how a switch or any on/off actuator works. This will also work as a foundation for the following exercises.
+In this exercise we will control a LED on our breadboard using commands from an application connected to IoT Open. This is exactly how a switch or any on/off actuator works. This will also work as a foundation for the upcoming exercises.
 
 ![Overview of the goal for this exercise](../images/exercise-1-overview.png)
 
@@ -16,11 +16,17 @@ In this exercise we will control a LED on our breadboard using commands from an 
 - Install Raspberry Pi OS 64bit on your Raspberry (if you haven't already). Make sure you can log in to it from your laptop.
 - You should have an account on IoT Open that you can log into from earlier exercises.
 
+### Sources for more information
+
+- [Raspberry Pi Documentation, Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+- [IoT Open Platform](https://lynx.iotopen.se)
+
+
 ## Learning goals
 
 - Actuators (Control real things via IoT, unlike sensors that just collects data)
 - Communication via MQTT
-- Edge Clients
+- IoT Open Edge Client
 - How topic\_write and the MQTT-payload format works in IoT Open
 - Starting point for following exercises
 
@@ -33,10 +39,8 @@ Make the electronics work and the LED to flash.
 1. Make sure you can login to your Raspberry Pi and that it is arm64.
 1. Make the circuit as in [this image](../images/exercise-1-circuit.png).
 1. Test the circuit with these commands
-   1. `echo 16 > /sys/class/gpio/export` # Enable the pin as GPIO
-   1. `echo out > /sys/class/gpio/gpio16/direction` # Set it to OUTPUT
-   1. `echo 1 > /sys/class/gpio/gpio16/value` # The LED should be lit
-   1. `echo 0 > /sys/class/gpio/gpio16/value` # The LED should be dark
+   1. `gpioset gpiochip0 16=1` # The LED should be lit
+   1. `gpioset gpiochip0 16=0` # The LED should be dark
    1. Test 3 and 4 over and over.
 1. Do not move to the next section until it works and you know why!
 
