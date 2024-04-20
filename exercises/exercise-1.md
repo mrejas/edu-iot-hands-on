@@ -13,7 +13,7 @@ In this exercise we will control a LED on our breadboard using commands from an 
 
 In [this photo](../images/exercise-1-circuit-photo.jpg) you can see all the components needed.
 
-_\*) 330Ω is not exact, if higher the LED will glow less intence. Newer go under 200Ω since that may damage your Raspberry Pi._
+_\*) 330Ω is not exact, if higher the LED will glow less intense. Newer go under 200Ω since that may damage your Raspberry Pi._
 
 ## Preparations
 
@@ -132,3 +132,16 @@ What we want is to let the controller on the Rasperry Pi (the Python program) to
 
 ### Milestone VIII (Create a Node-RED application controlling the LED)
 
+The goal is to have two Inject nodes sending `1` resp `0` to the LED function. Then we should be able to control the LED with these Inject nodes.
+
+1. Generate an API Token for Node-RED on your user.
+1. In Node-RED add a Lynx out node and configure the Lynx server. (see here XXXX (film or screenshots))
+1. Configure the Lynx out to control the MyLED function en the `write`topic (that is `topic_write`)
+1. Add a `Lynx In` node and configure it to the same function, byt the `read`topic.
+1. Connect the `Lynx in`node to a debug node.
+
+### Reflection
+
+If you listen on MQTT you will se IoT Open Payloads flying around. E.g. '{ "value": 1, "timestamp": 1234567}' but you inject just a `1`or `0`. Doesn't that seem strange? It is because the Lynx out node in Node-RED converts the data to the correct format if there is a single number in the flow. It is also possible to send a complete IoT Open MQTT message.
+
+Now we have accomplished everything in this exercise. We can control our LED via two inject nodes in Node-RED. What you have done is a simple IoT application. It might not look that cool but it is the foundation in many IoT applications. And you are ready for the next step.
