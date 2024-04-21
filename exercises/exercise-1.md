@@ -144,4 +144,4 @@ The goal is to have two Inject nodes sending `1` resp `0` to the LED function. T
 
 If you listen on MQTT you will se IoT Open Payloads flying around. E.g. '{ "value": 1, "timestamp": 1234567}' but you inject just a `1`or `0`. Doesn't that seem strange? It is because the Lynx out node in Node-RED converts the data to the correct format if there is a single number in the flow. It is also possible to send a complete IoT Open MQTT message.
 
-Now we have accomplished everything in this exercise. We can control our LED via two inject nodes in Node-RED. What you have done is a simple IoT application. It might not look that cool but it is the foundation in many IoT applications. And you are ready for the next step.
+Now we have accomplished everything in this exercise. We can control our LED via two inject nodes in Node-RED. What you have done is a simple IoT application. It might not look that cool but it is the foundation in many IoT applications. In this case it is just a LED we are controlling but keep in mind that it could be pretty much anything. And you are now ready for the next step.
