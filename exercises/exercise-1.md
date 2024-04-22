@@ -159,7 +159,7 @@ to `/etc/rc.local`. Add it above the `exit 0` on the last line. Lines after `exi
 
 Please make sure that the path to the script is correct and don't miss the ampersand (&) at the end. When you now reboot the Pi the script should be running.
 
-### Reflection
+## Reflection
 
 If you listen on MQTT you will se IoT Open Payloads flying around. E.g. '{ "value": 1, "timestamp": 1234567}' but you inject just a `1`or `0`. Doesn't that seem strange? It is because the Lynx out node in Node-RED converts the data to the correct format if there is a single number in the flow. It is also possible to send a complete IoT Open MQTT message.
 
