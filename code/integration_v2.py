@@ -6,6 +6,8 @@ import time
 import json
 
 topic_write="set/tuc/led1"
+topic_read="obj/tuc/led1"
+
 led = 16
 
 GPIO.setmode(GPIO.BCM)
@@ -20,15 +22,14 @@ def on_message(client, userdata, message):
     payload = json.loads(message.payload)
 
     if message.topic == topic_write:
-        print("topic" + str(message.topic))
         if payload["value"] == 0:
             print("Turning led off")
             GPIO.output(led,0)
-            client.publish('{"value":0, "timestamp":' + time.time() + '}')
+            client.publish(topic_read, '{"value":0, "timestamp":' + time.time() + '}')
         else:
             print("Turning led on")
             GPIO.output(led,1)
-            client.publish('{"value":1, "timestamp":' + time.time() + '}')
+            client.publish(topic_read, '{"value":1, "timestamp":' + time.time() + '}')
     else:
         print("Ignoring " + message.topic)
 
