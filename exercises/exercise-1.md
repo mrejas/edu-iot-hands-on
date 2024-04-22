@@ -114,7 +114,7 @@ Now we can control the LED with Python code. That's cool. We could now write loc
 
 ### Reflection
 
-Now we can control the LED with `topic_write`. But how will we know the status of the LED? You might think that we can do that by listening to `topic_write` but that would only work to some extent because what we are monitoring then is when the LED was asked to be set to a certain state, not that it actually was. If the Rasperry Pi is offline and someone sends something to `topic_write` nothing will happen. This is one of the reasons for `topic_read` and `topic_write`.
+Now we can control the LED with `topic_write`. But how will we know the status of the LED? You might think that we can do that by listening to `topic_write` but that would only work to some extent because what we are monitoring then is when the LED was asked to be set to a certain state, not that it actually was. If the Raspberry Pi is offline and someone sends something to `topic_write` nothing will happen. This is one of the reasons for `topic_read` and `topic_write`.
 
 What we want is to let the controller on the Raspberry Pi (the Python program) to report back that the LED actually was lit or unlit. This is done on `topic_read` and on a MQTT-topic starting with `obj/`. If you want to observe something you should listen to `topic_read`. Sensors that only reports data, e.g. a thermometer only needs a `topic_read`.
 
@@ -137,13 +137,13 @@ The goal is to have two Inject nodes sending `1` resp `0` to the LED function. T
    - Click on the user icon in the top right corner and choose "My account".
    - Click on "Security" -> API-Keys
    - At the bottom click "Create new API key" and give the key a name. Copy the key end save it. 
-1. In Node-RED add a Lynx out node and configure a new Lynx-server.\
+1. In Node-RED add a `lynx - out` node and configure a new Lynx-server.\
    ![Configure a new Lynx-server](../images/node-red-lynx-server.png)
-1. Configure the Lynx out to control the MyLED function on the `write`topic (that is `topic_write`)\
-   ![Configure a Lynx-out node](../images/node-red-lynx-out.png)
+1. Configure the `lynx - out` to control the MyLED function on the `write` topic (that is `topic_write`)\
+   ![Configure a lynx - out node](../images/node-red-lynx-out.png)
 1. Add two Inject nodes that sends a number `0` resp number `1` as `msg.payload`. You can leave the `msg.topic` as is.
-1. Add a `Lynx In` node and configure it to the same function, but the `read` topic.
-1. Connect the `Lynx in`node to a debug node.
+1. Add a `lynx - in` node and configure it to the same function, but the `read` topic.
+1. Connect the `lynx - in`node to a debug node.
 
 The flow should look like this:
 
