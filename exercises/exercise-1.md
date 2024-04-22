@@ -92,11 +92,10 @@ Now we can control the LED with Python code. That's cool. We could now write loc
 
 1. Make sure you passed milestone IV
 1. Log in to the Raspberry Pi and open TWO consoles.
-1. Install paho python lib on your RPi: sudo apt-get install python3-paho-mqtt
-1. Save this program as `led_integration.py` and start it (it will hog your terminal)
-1. You can stop the program with `Ctrl-C`
+1. Install paho python lib on your RPi: `sudo apt-get install python3-paho-mqtt`
+1. Save [this program](../code/integration_v1.py) as `led_integration_v1.py` and start it (it will "hog" your terminal, that's why you want two.) You can stop the program with `Ctrl-C`, but don't do that now.
 1. In the other console run `mosquitto_pub -t set/tuc/led1 -m '{"value": 0}'`
-1. Change the `0` to something else (e.g. `1` or `255`) and see what happens.
+1. Change the `0` to something else (e.g. `1` or `255`) and see what happens (The LED should be unlit on 0 and lit on any other number).
 1. Take a look at the MQTT window in IoT Open or the Workbench to see what happens.
 1. Do not move to the next section until it works and you know why!
 
@@ -115,15 +114,15 @@ Now we can control the LED with Python code. That's cool. We could now write loc
 
 ### Reflection
 
-Now we can control the LED with `topic_write`. But how will we know the status of the LED? You might think that we can do that by listening to `topic_write` and that would work to some extent. But what we are monitoring then is when the LED was asked to be set to a certain state. Not that i actually was. If the Rasperry Pi is offline and somewone sends something to `topic_write` nothing will happen. This is one of the reasons for `topic_read` and `topic_write`.
+Now we can control the LED with `topic_write`. But how will we know the status of the LED? You might think that we can do that by listening to `topic_write` but that would only work to some extent because what we are monitoring then is when the LED was asked to be set to a certain state, not that it actually was. If the Rasperry Pi is offline and someone sends something to `topic_write` nothing will happen. This is one of the reasons for `topic_read` and `topic_write`.
 
-What we want is to let the controller on the Rasperry Pi (the Python program) to report back that the LED actually was lit or unlit. This is done on `topic_read` and on a MQTT-topic starting with `obj/`. If you want to observe something you should listen to `topic_read`. Sensors that only reports data, e.g. a thermometer only needs a `topic_read`.
+What we want is to let the controller on the Raspberry Pi (the Python program) to report back that the LED actually was lit or unlit. This is done on `topic_read` and on a MQTT-topic starting with `obj/`. If you want to observe something you should listen to `topic_read`. Sensors that only reports data, e.g. a thermometer only needs a `topic_read`.
 
 ### Milestone VII (Create topic read and report to it)
 
 1. Make sure you have achieved Milestone VI
 1. Log in to IoT Open and navigate to your installation
-1. Navigate to functions and create a new function
+1. Navigate to functions and click on "MyLED" that you created earlier.
 1. In the meta data section change `topic_read` to the value `obj/tuc/led1`
 1. Update your program to the program to the right.
 1. Now you can test to turn on and off the led using the MQTT-window in IoT Open or the data fiddler in the Workbench.
@@ -135,10 +134,30 @@ What we want is to let the controller on the Rasperry Pi (the Python program) to
 The goal is to have two Inject nodes sending `1` resp `0` to the LED function. Then we should be able to control the LED with these Inject nodes.
 
 1. Generate an API Token for Node-RED on your user.
-1. In Node-RED add a Lynx out node and configure the Lynx server. (see here XXXX (film or screenshots))
-1. Configure the Lynx out to control the MyLED function en the `write`topic (that is `topic_write`)
-1. Add a `Lynx In` node and configure it to the same function, byt the `read`topic.
+   - Click on the user icon in the top right corner and choose "My account".
+   - Click on "Security" -> API-Keys
+   - At the bottom click "Create new API key" and give the key a name. Copy the key end save it. 
+1. In Node-RED add a Lynx out node and configure a new Lynx-server.
+   ![Configure a new Lynx-server](../images/node-red-lynx-server.png)
+1. Configure the Lynx out to control the MyLED function on the `write`topic (that is `topic_write`)
+   ![Configure a Lynx-out node](../images/node-red-lynx-out.png)
+1. Add two Inject nodes that sends a number `0` resp number `1` as `msg.payload`. You can leave the `msg.topic` as is.
+1. Add a `Lynx In` node and configure it to the same function, but the `read` topic.
 1. Connect the `Lynx in`node to a debug node.
+
+The flow should look like this:
+
+![The Node-RED Flow](../images/node-red-lynx-flow.png)
+
+### Extra
+
+If you want the integration to start whenever the Raspberry Pi starts a simple way to do this is to add the line
+
+```python /home/pi/integration_v2.py &```
+
+to `/etc/rc.local`. Add it above the `exit 0` on the last line. Lines after `exit 0` will not be executed.
+
+Please make sure that the path to the script is correct and don't miss the ampersand (&) at the end. When you now reboot the Pi the script should be running.
 
 ### Reflection
 
