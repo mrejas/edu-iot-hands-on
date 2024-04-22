@@ -20,7 +20,6 @@ def on_message(client, userdata, message):
     payload = json.loads(message.payload)
 
     if message.topic == topic_write:
-        print("topic" + str(message.topic))
         if payload["value"] == 0:
             print("Turning led off")
             GPIO.output(led,0)
