@@ -45,9 +45,9 @@ Make the electronics work and the LED to flash.
 1. Make sure you can login to your Raspberry Pi and that it is arm64.
 1. Make the circuit as in [this image](../images/exercise-1-circuit.png).
 1. Test the circuit with these commands
-   1. `gpioset gpiochip0 16=1` # The LED should be lit
-   1. `gpioset gpiochip0 16=0` # The LED should be dark
-   1. Test 3 and 4 over and over.
+   - `gpioset gpiochip0 16=1` # The LED should be lit
+   - `gpioset gpiochip0 16=0` # The LED should be dark
+   - Test 3 and 4 over and over.
 1. Do not move to the next section until it works and you know why!
 
 [A photo of my circuit](../images/exercise-1-circuit-photo.jpg).
@@ -137,9 +137,9 @@ The goal is to have two Inject nodes sending `1` resp `0` to the LED function. T
    - Click on the user icon in the top right corner and choose "My account".
    - Click on "Security" -> API-Keys
    - At the bottom click "Create new API key" and give the key a name. Copy the key end save it. 
-1. In Node-RED add a Lynx out node and configure a new Lynx-server.
+1. In Node-RED add a Lynx out node and configure a new Lynx-server.\
    ![Configure a new Lynx-server](../images/node-red-lynx-server.png)
-1. Configure the Lynx out to control the MyLED function on the `write`topic (that is `topic_write`)
+1. Configure the Lynx out to control the MyLED function on the `write`topic (that is `topic_write`)\
    ![Configure a Lynx-out node](../images/node-red-lynx-out.png)
 1. Add two Inject nodes that sends a number `0` resp number `1` as `msg.payload`. You can leave the `msg.topic` as is.
 1. Add a `Lynx In` node and configure it to the same function, but the `read` topic.
