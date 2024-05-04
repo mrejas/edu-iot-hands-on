@@ -25,11 +25,11 @@ def on_message(client, userdata, message):
         if payload["value"] == 0:
             print("Turning led off")
             GPIO.output(led,0)
-            client.publish(topic_read, '{"value":0, "timestamp":' + time.time() + '}')
+            client.publish(topic_read, '{"value":0, "timestamp":' + str(time.time()) + '}')
         else:
             print("Turning led on")
             GPIO.output(led,1)
-            client.publish(topic_read, '{"value":1, "timestamp":' + time.time() + '}')
+            client.publish(topic_read, '{"value":1, "timestamp":' + str(time.time()) + '}')
     else:
         print("Ignoring " + message.topic)
 
