@@ -4,7 +4,9 @@ Before you do this one, make sure you already have done [IoT Exercise 1](exercis
 
 In this exercise we will add two push buttons to the breadboard for turning the LED on and off. If you don't have any buttons you can use only connection wires and short them to simulate a push button.
 
-We will also have use the push buttons to control our friends LED.
+![Overview of this exercise](../images/exercise-2-overview.png)
+
+We will also use the push buttons to control a friends LED.
 
 ## Material
 
@@ -18,6 +20,7 @@ We will also have use the push buttons to control our friends LED.
 
 ### Sources for more information
 
+- [Pull up resistor](https://en.wikipedia.org/wiki/Pull-up_resistor)
 
 ## Learning goals
 
@@ -40,17 +43,23 @@ Both local and cloud processing have pros and cons. None of them is better than 
 
 ## Steps to make this happen
 
-### Milestone I (Electronics prototype and verification)
+### Milestone I (Electronics prototype)
 
 Add two push buttons to the board and make the circuit as in [this image](../images/exercise-2-circuit.png). Please note that the buttons have two pairs of connected pins. If the test below doesn't work try rotate the buttons 90 degrees in any direction.
 
-### Milestone II (Connect the buttons to MQTT)
+Please be thorough when making the connections. If you visits the physical workshop we will have limited access to debugging tools. There is now
 
-### Milestone III (Make a function in IoT Open)
+### Milestone II (Software POC)
 
-### Milestone IV (Connect the function to the LED in Node-RED)
 
-### Milestone V (Get access to your friends installation)
+
+### Milestone III (MQTT from the two buttons)
+
+### Milestone IV (Verify MQTT traffic)
+
+### Milestone V (Create a function in IoT Open for your buttons)
+
+### Milestone VI (Connect your buttons to the LED via Node-RED)
 
 ### Milestone VI (Control your friends LED from Node-RED)
 
