@@ -61,6 +61,8 @@ Please be thorough when making the connections. If you visits the physical works
 
 ### Milestone VI (Connect your buttons to the LED via Node-RED)
 
+![Node-RED](../images/exercise-2-node-red.png)
+
 ### Milestone VI (Control your friends LED from Node-RED)
 
 ### Milestone VII (Control your friends LED from your board)
