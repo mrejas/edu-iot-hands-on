@@ -13,7 +13,7 @@ In this exercise we will control a LED on our breadboard using the orientation o
 
 - Make sure you have done exercise 1 and 2 and understands the concepts in them.
 
-### Sources for more information
+### Sources for more information and resources
 
 - [Raspberry Pi Documentation, Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 - [IoT Open Platform](https://lynx.iotopen.se)
