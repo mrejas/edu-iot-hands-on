@@ -18,12 +18,12 @@ In this exercise we will control a LED on our breadboard using commands from an 
 
 ### Second exercise (locally vs cloud)
 
-This is a continuation of the first exercise. In this exercise we will add two buttons to the breadboard and use them to send a signal to the IoT Platform. The signal will then be used to control the LED from the first exercise. We will control the LED both Locally and via the IoT Open platform. This exercise also emphases the pros and cons with central and edge processing.
+This is a continuation of the first exercise. In this exercise we will add two buttons to the breadboard and use them to send a signal to the IoT Platform. The signal will then be used to control the LED from the first exercise. We will control the LED both Locally and via the IoT Open platform. This exercise also emphases the pros and cons with central (cloud) and edge (local) processing.
 
-(Will be published)
+[Read the second exercise](/exercises/exercise-2.md)
 
 ### Third exercise (expand the boundaries)
 
-So far we have been working one by one. Now let's form pairs and make one button on a board control the LED on another board. Now we will be in the same room, but it works across the globe as well.
+Let's add another thing into the equation. 
 
 (Will be published)
