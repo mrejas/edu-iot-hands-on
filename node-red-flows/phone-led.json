@@ -1,0 +1,133 @@
+[
+    {
+        "id": "92679da5b2b4c943",
+        "type": "inject",
+        "z": "45f9033c9dec5335",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "817fa40b4816c04a"
+            ]
+        ]
+    },
+    {
+        "id": "b53cd4a0b11c7a4e",
+        "type": "inject",
+        "z": "45f9033c9dec5335",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "817fa40b4816c04a"
+            ]
+        ]
+    },
+    {
+        "id": "24edb45de813ed9d",
+        "type": "rbe",
+        "z": "45f9033c9dec5335",
+        "name": "Ingore duplettes",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.value",
+        "topi": "topic",
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "817fa40b4816c04a"
+            ]
+        ]
+    },
+    {
+        "id": "1b98ee4614dfc9f8",
+        "type": "function",
+        "z": "45f9033c9dec5335",
+        "name": "Only send 1 or 0",
+        "func": "if (msg.payload.value > 0) {\n    msg.payload.value = 1;\n} else {\n    msg.payload.value = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "24edb45de813ed9d"
+            ]
+        ]
+    },
+    {
+        "id": "4787ffa1d93aa7fb",
+        "type": "lynx-in",
+        "z": "45f9033c9dec5335",
+        "server": "",
+        "use_meta_filter": false,
+        "installation_id": 6,
+        "function_id": 62250,
+        "function_name": "Your phone – gravity_z",
+        "filter": [],
+        "topic": "obj/sensorapp/xxx/gravity_z",
+        "client_id": 6,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "1b98ee4614dfc9f8"
+            ]
+        ]
+    },
+    {
+        "id": "817fa40b4816c04a",
+        "type": "lynx-out",
+        "z": "45f9033c9dec5335",
+        "server": "",
+        "installation_id": 6,
+        "function_id": 60399,
+        "function_name": "Your LED (topic_write)",
+        "topic": "set/tuc/led1",
+        "client_id": 6,
+        "x": 840,
+        "y": 340,
+        "wires": []
+    }
+]
