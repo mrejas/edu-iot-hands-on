@@ -14,19 +14,19 @@ In the exercises we will step by step build an IoT application including hardwar
 
 In this exercise we will control a LED on our breadboard using commands from an application connected to IoT Open. This is exactly how a switch or any on/off actuator works.
 
-[Read the first exercise](/exercises/exercise-1.md)
-[Graphical overview](./images/exercise-1-board.webp)
+[Read the first exercise](/exercises/exercise-1.md)  
+[Graphical overview](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-1-board.webp)
 
 ### Second exercise (locally vs cloud)
 
 This is a continuation of the first exercise. In this exercise we will add two buttons to the breadboard and use them to send a signal to the IoT Platform. The signal will then be used to control the LED from the first exercise. We will control the LED both Locally and via the IoT Open platform. This exercise also emphases the pros and cons with central (cloud) and edge (local) processing.
 
-[Read the second exercise](/exercises/exercise-2.md)
-[Graphical overview](./images/exercise-2-board.webp)
+[Read the second exercise](/exercises/exercise-2.md)  
+[Graphical overview](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-2-board.webp)
 
 ### Third exercise (expand the boundaries)
 
 Let's add another thing into the equation. Our phone will now be a sensor. And depending on the orientation of your phone, i.e. if the screen is phasing up or down, the LED will be lit.
 
-[Read the second exercise](/exercises/exercise-2.md)
-[Graphical overview](./images/exercise-3-board.webp)
+[Read the second exercise](/exercises/exercise-2.md)  
+[Graphical overview](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-3-board.webp)
