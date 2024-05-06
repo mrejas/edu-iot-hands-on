@@ -4,6 +4,8 @@ Before you do this one, make sure you already have done [IoT Exercise 1](exercis
 
 In this exercise we will add two push buttons to the breadboard for turning the LED on and off. If you don't have any buttons you can use only connection wires and short them to simulate a push button.
 
+A graphical view of this exercise is [here](../images/exercise-2-board.webp).
+
 ![Overview of this exercise](../images/exercise-2-overview.png)
 
 We will also use the push buttons to control a friends LED.
@@ -83,7 +85,7 @@ No we will use MQTT to send data from the two push buttons. Here we will use the
 1. Watch the MQTT in IoT Open when clicking you buttons
 1. Do not move to the next section until it works and you know why!
 
-Please note that the buttons will only send MQTT as long as the script above is running. If this was a real application we need a way to start the integration whenever the Raspberry Pi boots up.
+Please note that the buttons will only send MQTT as long as the script above is running. If this was a real application we need a way to start the integration whenever the Raspberry Pi boots up. There is a description on how to do this in [exercise 1](./exercise-1.md)
 
 ### Milestone IV (Verify MQTT traffic)
 

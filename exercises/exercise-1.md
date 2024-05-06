@@ -2,6 +2,8 @@
 
 In this exercise we will control a LED on our breadboard using commands from an application connected to IoT Open. This is exactly how a switch or any on/off actuator works. This will also work as a foundation for the upcoming exercises.
 
+A graphical view of this exercise is [here](../images/exercise-1-board.webp).
+
 ![Overview of the goal for this exercise](../images/exercise-1-overview.png)
 
 ## Material
@@ -13,7 +15,7 @@ In this exercise we will control a LED on our breadboard using commands from an 
 
 In [this photo](../images/exercise-1-circuit-photo.jpg) you can see all the components needed.
 
-_\*) 330Ω is not exact, if higher the LED will glow less intense. Newer go under 200Ω since that may damage your Raspberry Pi._
+_\*) 330Ω is not exact, if higher the LED will glow less intense. Newer use less then 200Ω since that may damage your Raspberry Pi._
 
 ## Preparations
 
