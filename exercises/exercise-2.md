@@ -4,7 +4,6 @@ Before you do this one, make sure you already have done [IoT Exercise 1](exercis
 
 In this exercise we will add two push buttons to the breadboard for turning the LED on and off. If you don't have any buttons you can use only connection wires and short them to simulate a push button.
 
-A graphical view of this exercise is [here](../images/exercise-2-board.webp).
 A graphical view of this exercise is [here](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-2-board.webp)).
 
 ![Overview of this exercise](../images/exercise-2-overview.png)
