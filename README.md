@@ -4,7 +4,7 @@
 
 These files was made for the practical part of an IoT Education given in Sweden for [TUC Sweden](https://www.tucsweden.se/). The course is a mostly theoretical course and this material is only for the practical part of the course.
 
-The files here are mostly of interest to the students on the course but others might find something interesting as well. It is vary possible to do this all of you own but then you will miss out on the lecturing that was given as well.
+The files here are mostly of interest to the students on the course but others might find something interesting as well. It is possible to do this all of you own but then you will of course miss out on the lecturing, anecdotes and bad delivered jokes that was given as well.
 
 ## Prerequisites
 
@@ -13,12 +13,12 @@ You will need some things to get started. They are specified in each exercise bu
 - A Raspberry Pi (Model 3 or 4) with 64-bit Raspberry Pi OS
 - A breadboard and som electronical components
   - Some connection cables
-  - At least 2 330 Ohm resistors
+  - At least 2 330 Ohm resistors (The value is not that important above 200 and below 400 should work)
   - At least 1 LED
   - At least 2 tactile push buttons
   - A cell phone with IOS or Android (optional only for exercise 3)
 
-  You can get all the components in any basic electronics starter kits.
+  You can get all the components in any basic electronics starter kit.
 
 ## The exercises
 
