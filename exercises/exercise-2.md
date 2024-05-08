@@ -107,7 +107,7 @@ In order to connect the buttons to the world we need to create a function for th
 1. Navigate to functions and create a new function
 1. Call it "MyButtons" or whatever you see fit
 1. Give it type "switch"
-1. In the meta data section add topic_write with value obj/tuc/button
+1. In the meta data section add topic_read with value obj/tuc/button
 1. In the log for your new function you should see your button presses
 1. Do not move to the next section until it works and you know why!
 
