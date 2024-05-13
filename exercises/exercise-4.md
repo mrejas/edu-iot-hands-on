@@ -36,7 +36,6 @@ And you can test it with
 
 ```
 python3 cpu_read_temp.py
-
 ```
 
 If it run "clean" it probably works. You can verify it in the IoT Open MQTT-window or in the workbench.
