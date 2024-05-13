@@ -42,5 +42,11 @@ This is a continuation of the first exercise. In this exercise we will add two b
 
 Let's add another thing into the equation. Our phone will now be a sensor. And depending on the orientation of your phone, i.e. if the screen is phasing up or down, the LED will be lit.
 
-[Read the second exercise](/exercises/exercise-2.md)  
+[Read the second exercise](/exercises/exercise-3.md)  
 [Graphical overview](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-3-board.webp)
+
+### Fourth exercise
+
+ We will use an internal sensor of the Raspberry Pi and use different ways to trigger measurements.
+
+[Read the second exercise](/exercises/exercise-4.md)  
