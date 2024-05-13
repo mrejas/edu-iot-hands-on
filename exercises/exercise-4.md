@@ -49,11 +49,12 @@ Don't move to the next section until you know it works!
 
 Create a function like this in IoT Open
 
-Name: RPi CPU Temperature  
-Type: temperature  
+```
+Name: RPi CPU Temperature
+Type: temperature
 Meta->format: %0.2f °C
 Meta->topic_read: obj/rpi/cpu_temp
-
+```
 And make sure you have some data on it since your tests in Milestone I.
 
 Don't move to the next section until you know it works!
@@ -156,7 +157,9 @@ Don't move to the next section until it works.
 
 Lastly add this to the function you created earlier:
 
+```
 Meta->topic_get: cmd/rpi/cpu_temp
+```
 
 ### Milestone V (Use the IoT Open Scheduler)
 
