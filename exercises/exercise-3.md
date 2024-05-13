@@ -1,6 +1,6 @@
 # IoT Exercise 3
 
-In this exercise we will control a LED on our breadboard using the orientation of our phone(!). This is exactly how many IoT applicatons works that reacts to a value of a certain sensor. That can be a heater starting when the temperature is low, or a burglar alarm to go off when there is movement or pretty much anything.
+In this exercise we will control a LED on our breadboard using the orientation of our phone(!). This is exactly how many IoT applications works that reacts to a value of a certain sensor. That can be a heater starting when the temperature is low, or a burglar alarm to go off when there is movement or pretty much anything.
 
 A graphical view of this exercise is [here](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-3-board.webp).
 
