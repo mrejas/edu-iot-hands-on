@@ -2,12 +2,23 @@
 
 In this exercise we will use a real sensor. We will use the CPU temperature sensor on the Raspberry Pi and send that to IoT Open. We will consider what is driving data in an IoT solution.
 
-This is probably the easiest exercise yet, see this as a starting point for next exercise.
+This is probably the easiest exercise yet.
 
 ## Material
 
 - Raspberry Pi, set up as IoT Open Edge Client
 - Make sure the Edge Client in IoT Open is green!
+
+Before you do this one, make sure you already have done [IoT Exercise 1](exercise-1.md).
+
+In this exercise we will add two push buttons to the breadboard for turning the LED on and off. If you don't have any buttons you can use only connection wires and short them to simulate a push button.
+
+A graphical view of this exercise is [here](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-2-board.webp)).
+
+![Overview of this exercise](../images/exercise-2-overview.png)
+
+We will also use the push buttons to control a friends LED.:q
+
 
 ## Preparations
 
