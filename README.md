@@ -56,3 +56,9 @@ Let's add another thing into the equation. Our phone will now be a sensor. And d
 Here we will use a photoresistor as input
 
 [Read the fifth exercise](/exercises/exercise-5.md)
+
+### Sixth exercise
+
+This is the final exercise. It is probably only useful for my students in Helsingborg since it is a group effort and I assume that most reading this text works alone. But hey, I might be wrong of course :-).
+
+[Read the sixth exercise](/exercises/exercise-6.md)

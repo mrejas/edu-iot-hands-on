@@ -2,7 +2,7 @@
 
 In this exercise we will use a phototresistor as a sensor.
 
-A graphical view of this exercise is [here](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-5-board.png)).
+A graphical view of this exercise is [here](https://github.com/mrejas/edu-iot-hands-on/raw/main/images/exercise-5-board.png).
 
 A [photo of the circuit used](../images/exercise-5-circuit-photo.jpg).
 
