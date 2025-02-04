@@ -20,6 +20,10 @@ You will need some things to get started. They are specified in each exercise bu
 
   You can get all the components in any basic electronics starter kit.
 
+For my students I made a small video about how to make a Raspberry Pi to an IoT Open Edge Client. Might be intersting for someone else as well.
+
+[![RPI Edge Install](images/thumbnail.jpg)](https://play.rejas.se/w/suhyhsNtJDFBdnKcjBW6FJ)
+
 ## The exercises
 
 In the exercises we will step by step build an IoT application including hardware, software and using the platform IoT Open to connect it all together.
